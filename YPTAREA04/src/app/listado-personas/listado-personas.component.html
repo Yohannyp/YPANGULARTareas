@@ -1,0 +1,52 @@
+<head>
+  <base href="/" />
+  <title>Angular - Display a list of items with ngFor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- bootstrap css -->
+  <link href="//netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<!--  ===========================  -->
+<!--        Input Fields           -->
+<!--  ===========================  -->
+
+<div class="datos">
+
+  <input type="text" name="nombre" [(ngModel)]="nombre" placeholder="Nombre">
+  <input type="text" name="titulo" [(ngModel)]="titulo" placeholder="Titulo">
+  <input type="text" name="bio" [(ngModel)]="bio" placeholder="Bio">
+  <button (click)="agregar()">Agregar</button>
+</div>
+
+<!--  ===========================  -->
+<!--        Show List              -->
+<!--  ===========================  -->
+
+<div >
+  
+ <!-- <app-item-persona *ngFor="let persona of personas"  [persona]="persona">
+ </app-item-persona> -->
+
+
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Titulo</th>
+                <th>Bio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let persona of personas">
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.titulo}}</td>
+                <td>{{persona.bio}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</div>

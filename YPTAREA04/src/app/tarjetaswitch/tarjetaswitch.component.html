@@ -1,0 +1,31 @@
+<div [ngSwitch]="titulo">
+    <div *ngSwitchCase="'Nurse'" Class = "card nurse">
+         <h2>Tarjeta de presentación</h2>
+         <p>Nombre: {{nombre}}</p>
+         <p>Titulo: {{titulo}}</p>
+         <p>Bio: {{bio}}</p>
+    </div>
+
+    <div *ngSwitchCase="'Web Designer'" Class = "card web-designer">
+        <h2>Tarjeta de presentación</h2>
+        <p>Nombre: {{nombre}}</p>
+        <p>Titulo: {{titulo}}</p>
+        <p>Bio: {{bio}}</p>
+   </div>
+
+   <div *ngSwitchCase="'Software Engineer'" Class = "card software-engineer">
+    <h2>Tarjeta de presentación</h2>
+    <p>Nombre: {{nombre}}</p>
+    <p>Titulo: {{titulo}}</p>
+    <p>Bio: {{bio}}</p>
+   </div>
+      
+   <div *ngSwitchDefault Class = "card defecto">
+    <h2>Tarjeta de presentación</h2>
+    <p>Nombre: {{nombre}}</p>
+    <p>Titulo: {{titulo}}</p>
+    <p>Bio: {{bio}}</p>
+   </div>
+
+
+</div>

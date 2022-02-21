@@ -1,0 +1,12 @@
+.datos {
+    border: 1px solid #B5A886;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 1px 6px 6px #ccc;
+    background-color:lightcyan;
+    color: black;
+    margin-bottom: 3rem;
+    max-width: 300px;
+    margin: 3rem auto 0 auto; 
+}

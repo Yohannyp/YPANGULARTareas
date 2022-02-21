@@ -1,0 +1,59 @@
+.card {
+    border: 1px solid #B5A886;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 1px 6px 6px #ccc;
+    background-color:lightcyan;
+    color: black;
+    margin-bottom: 3rem;
+    max-width: 300px;
+    margin: 3rem auto 0 auto; 
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* tarjeta para contenido opcional */
+.card.opcional {
+    min-height: 200px;
+    background-color:red;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.opcional > h2 {
+    
+}
+
+.card.nurse {
+    
+    background-color:lightpink;
+    
+}
+.card.web-designer {
+    
+    background-color: lightgray ;
+    
+}
+
+.card.software-engineer {
+    
+    background-color: lightgreen;
+    
+}
+
+.card.defecto {
+   
+    background-color:lightgoldenrodyellow;
+    
+}
