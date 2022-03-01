@@ -35,6 +35,7 @@
 
 <div class="container">
     <table class="table table-striped table-bordered">
+       
         <thead>
             <tr>
                 <th>Nombre</th>
@@ -42,6 +43,7 @@
                 <th>Bio</th>
             </tr>
         </thead>
+
         <tbody>
             <tr *ngFor="let persona of personas">
                 <td>{{persona.nombre}}</td>
@@ -49,6 +51,7 @@
                 <td>{{persona.bio}}</td>
             </tr>
         </tbody>
+
     </table>
 </div>
 
