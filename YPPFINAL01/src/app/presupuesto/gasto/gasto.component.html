@@ -1,0 +1,55 @@
+<div class="container">
+ <div class="row">
+  <div class="col-12">
+    <div class="card mt-5">
+        <div class="card-body">
+            <h3 class="card-title mb-3"> 💲 Registro de Gasto</h3>
+            <form [formGroup]="this.presupuestoService.form">
+
+               
+                <div class="mb-3">
+                    <label for="type">Cuenta</label>
+                    <select fromControlName="type" 
+                    (change)="selectChangeHandlerGasto($event)"                    
+                    class="form-select">
+                        <option *ngFor="let type of types" [value]="type">{{type.name}}</option>                        
+                    </select>
+                </div>
+                                    
+                
+                <div class="mb-3">
+                    <label for="monto">Monto</label>
+                    <input formControlName="amount" 
+                    class="form-control"
+                    [ngClass]="this.presupuestoService.amount?.touched && this.presupuestoService.amount?.errors ? 'is-invalid' : ''"
+                    id="monto"
+                    type="number" placeholder="0.00">
+                    <div  *ngIf="this.presupuestoService.amount?.touched && this.presupuestoService.amount?.errors" class="invalid-feedback">
+                        Monto es Obligatorio
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="fecha">Fecha</label>
+                    <input formControlName="date" 
+                     class="form-control"
+                     [ngClass]="this.presupuestoService.date?.touched && this.presupuestoService.date?.errors ? 'is-invalid' : ''"
+                     id="fecha"
+                     type="date" >
+                     <div  *ngIf="this.presupuestoService.date?.touched && this.presupuestoService.date?.errors" class="invalid-feedback">
+                        Fecha es Obligatorio
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <button (click)="salvar('GASTO')" class= "btn btn-primary">Salvar</button>
+                   
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+  </div>
+ </div>
+</div>
